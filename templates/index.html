@@ -16,13 +16,13 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="{% static '/css/base.css' %}">
     <link rel="stylesheet" href="{% static '/css/vendor.css' %}">
     <link rel="stylesheet" href="{% static '/css/main.css' %}">
 
     <!-- script
     ================================================== -->
-    <script src=" {% static '/js/modernizr.js' %}"></script>
+    <script src="{% static '/js/modernizr.js' %}' %} "></script>
 
     <!-- favicons
     ================================================== -->
@@ -87,7 +87,7 @@
                     <div class="featured__slide">
                         <div class="entry">
 
-                            <div class="entry__background" style="background-image:url('static/images/thumbs/featured/featured-guitarman.jpg');"></div>
+                            <div class="entry__background" style="background-image:url('{% static '/images/thumbs/featured/featured-guitarman.jpg' %}');"></div>
 
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0">موزیک</a></span>
@@ -96,7 +96,7 @@
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="static/images/avatars/user-05.jpeg" alt="">
+                                        <img class="avatar" src="{% static '/images/avatars/user-05.jpeg" alt="">
                                     </a>
                                     <ul class="entry__meta">
                                         <li><a href="#0">محمد بابازاده</a></li>
@@ -112,7 +112,7 @@
 
                         <div class="entry">
 
-                            <div class="entry__background" style="background-image:url('static/images/thumbs/featured/featured-watch.jpg');"></div>
+                            <div class="entry__background" style="background-image:url('{% static '/images/thumbs/featured/featured-watch.jpg' %}');"></div>
 
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0">مدیریت</a></span>
@@ -121,7 +121,7 @@
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="static/images/avatars/user-03.jpeg" alt="">
+                                        <img class="avatar" src="{% static '/images/avatars/user-03.jpeg" alt="">
                                     </a>
 
                                     <ul class="entry__meta">
@@ -139,7 +139,7 @@
 
                         <div class="entry">
 
-                            <div class="entry__background" style="background-image:url('static/images/thumbs/featured/featured-beetle.jpg');"></div>
+                            <div class="entry__background" style="background-image:url('{% static '/images/thumbs/featured/featured-beetle.jpg' %}');"></div>
 
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0">سبک زندگی</a></span>
@@ -148,7 +148,7 @@
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="static/images/avatars/user-03.jpeg" alt="">
+                                        <img class="avatar" src="{% static '/images/avatars/user-03.jpeg" alt="">
                                     </a>
 
                                     <ul class="entry__meta">
@@ -181,8 +181,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/lamp-400.jpg"
-                                     srcset="static/images/thumbs/post/lamp-400.jpg 1x, static/images/thumbs/post/lamp-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/lamp-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/lamp-400.jpg' %} 1x, {% static '/images/thumbs/post/lamp-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -206,8 +206,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/tulips-400.jpg"
-                                     srcset="static/images/thumbs/post/tulips-400.jpg 1x, static/images/thumbs/post/tulips-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/tulips-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/tulips-400.jpg' %} 1x, {% static '/images/thumbs/post/tulips-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -231,8 +231,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/music-400.jpg"
-                                     srcset="static/images/thumbs/post/music-400.jpg 1x, static/images/thumbs/post/music-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/music-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/music-400.jpg' %} 1x, {% static '/images/thumbs/post/music-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -256,8 +256,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="{% static '/images/thumbs/post/watch-400.jpg' %}"
-                                     srcset="static/images/thumbs/post/watch-400.jpg 1x, static/images/thumbs/post/watch-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/watch-400.jpg' %}' %}"
+                                     srcset="{% static '/images/thumbs/post/watch-400.jpg' %}' %} 1x, {% static '/images/thumbs/post/watch-800.jpg' %}' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -281,8 +281,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/wheel-400.jpg"
-                                     srcset="static/images/thumbs/post/wheel-400.jpg 1x, static/images/thumbs/post/wheel-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/wheel-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/wheel-400.jpg' %} 1x, {% static '/images/thumbs/post/wheel-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -306,8 +306,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/guitarist-400.jpg"
-                                     srcset="static/images/thumbs/post/guitarist-400.jpg 1x, static/images/thumbs/post/guitarist-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/guitarist-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/guitarist-400.jpg' %} 1x, {% static '/images/thumbs/post/guitarist-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -331,8 +331,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/jump-400.jpg"
-                                     srcset="static/images/thumbs/post/jump-400.jpg 1x, static/images/thumbs/post/jump-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/jump-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/jump-400.jpg' %} 1x, {% static '/images/thumbs/post/jump-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -356,8 +356,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/flowers-400.jpg"
-                                     srcset="static/images/thumbs/post/flowers-400.jpg 1x, static/images/thumbs/post/flowers-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/flowers-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/flowers-400.jpg' %} 1x, {% static '/images/thumbs/post/flowers-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -382,8 +382,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/woodcraft-400.jpg"
-                                     srcset="static/images/thumbs/post/woodcraft-400.jpg 1x, static/images/thumbs/post/woodcraft-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/woodcraft-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/woodcraft-400.jpg' %} 1x, {% static '/images/thumbs/post/woodcraft-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -408,8 +408,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/fuji-400.jpg"
-                                     srcset="static/images/thumbs/post/fuji-400.jpg 1x, static/images/thumbs/post/fuji-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/fuji-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/fuji-400.jpg' %} 1x, {% static '/images/thumbs/post/fuji-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -433,8 +433,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/beetle-400.jpg"
-                                     srcset="static/images/thumbs/post/beetle-400.jpg 1x, static/images/thumbs/post/beetle-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/beetle-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/beetle-400.jpg' %} 1x, {% static '/images/thumbs/post/beetle-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -458,8 +458,8 @@
                     <div class="item-entry" data-aos="zoom-in">
                         <div class="item-entry__thumb">
                             <a href="single-standard.html" class="item-entry__thumb-link">
-                                <img src="static/images/thumbs/post/sydney-400.jpg"
-                                     srcset="static/images/thumbs/post/sydney-400.jpg 1x, static/images/thumbs/post/sydney-800.jpg 2x" alt="">
+                                <img src="{% static '/images/thumbs/post/sydney-400.jpg' %}"
+                                     srcset="{% static '/images/thumbs/post/sydney-400.jpg' %} 1x, {% static '/images/thumbs/post/sydney-800.jpg' %} 2x" alt="">
                             </a>
                         </div>
 
@@ -585,9 +585,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- Java Script
     ================================================== -->
-    <script src="static/js/jquery-3.2.1.min.js"></script>
-    <script src="static/js/plugins.js"></script>
-    <script src=" {% static '/js/main.js' "></script>
+    <script src="{% static '/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static '/js/plugins.js' %}"></script>
+    <script src="{% static  '/js/main.js' %}"></script>
 
 </body>
 
