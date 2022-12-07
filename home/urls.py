@@ -8,7 +8,7 @@ urlpatterns = [
     path('contact/',contact_view,name="contact"),
     path('about/', about_view , name="about"),
     path('categories/', categories_view , name="categories"),
-    #path('post-<int:pid>', categories_view , name="single"),
+    path('post-<int:pid>', single_view , name="single"),
 
 ]
 

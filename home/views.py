@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import *
+
 # Create your views here.
 
 
@@ -19,3 +20,12 @@ def about_view(request):
 
 def categories_view(request):
     return render(request,"category.html")
+
+
+def single_view(request,pid):
+    posts=Post.objects.filter(promote=True)
+    post = get_object_or_404(posts,pk=pid)
+    context ={
+        "post":post
+    }
+    return render(request,"single-standard.html",context)
