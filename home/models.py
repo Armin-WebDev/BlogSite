@@ -1,6 +1,8 @@
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
+
 # Create your models here.
 class UserProfile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
@@ -12,7 +14,7 @@ class UserProfile(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=127)
-    content = models.TextField()
+    content = RichTextField()
     image = models.ImageField(upload_to="blog/", null=False, blank=False)
     category = models.ForeignKey('Category',on_delete=models.CASCADE)
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
