@@ -9,6 +9,7 @@ urlpatterns = [
     path('about/', about_view , name="about"),
     path('categories/', categories_view , name="categories"),
     path('post-<int:pid>', single_view , name="single"),
+    
 
 ]
 

@@ -21,7 +21,7 @@
                             <div class="entry__content">
                                 <span class="entry__category"><a href="#0"{{post.category}}</a></span>
 
-                                <h1><a href="#0" title="">{{post.title}}</a></h1>
+                                <h1><a href="{% url 'single' pid=post.id%}" title="">{{post.title}}</a></h1>
 
                                 <div class="entry__info">
                                     <a href="#0" class="entry__profile-pic">
@@ -66,7 +66,7 @@
                                 <a href="category.html">{{post.category}}</a>
                             </div>
 
-                            <h1 class="item-entry__title"><a href="single-standard.html">{{post.title}}</a></h1>
+                            <h1 class="item-entry__title"><a href="{% url 'single' pid=post.id%}">{{post.title}}</a></h1>
 
                             <div class="item-entry__date">
                                 <a href="single-standard.html">{{post.created_at|date:"M d, Y"}}</a>
@@ -83,15 +83,25 @@
             <div class="col-full">
                 <nav class="pgn" data-aos="fade-up">
                     <ul>
-                        <li><a class="pgn__prev" href="#0">قبل</a></li>
-                        <li><a class="pgn__num" href="#0">۱</a></li>
-                        <li><span class="pgn__num current">۲</span></li>
-                        <li><a class="pgn__num" href="#0">۳</a></li>
+                        {% if posts.has_previous %}
+                        <li><a class="pgn__prev" href="?page={{ posts.previous_page_number }}">قبل</a></li>
+                        {% endif %}
+                        {% for post in posts.paginator.page_range %}
+                        {% if posts.number == post %}
+                        <span class="pgn__num current">{{post}}</span>
+                        {% else %}
+                        <li><a class="pgn__num" href="?page={{post}}">{{post}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        
+                        <!--<li><a class="pgn__num" href="#0">۳</a></li>
                         <li><a class="pgn__num" href="#0">۴</a></li>
                         <li><a class="pgn__num" href="#0">۵</a></li>
                         <li><span class="pgn__num dots">…</span></li>
-                        <li><a class="pgn__num" href="#0">۸</a></li>
-                        <li><a class="pgn__next" href="#0">بعد</a></li>
+                        <li><a class="pgn__num" href="#0">۸</a></li>-->
+                        {% if posts.has_next %}
+                        <li><a class="pgn__next" href="?page={{ posts.paginator.num_pages }}">بعد</a></li>
+                        {% endif %}
                     </ul>
                 </nav>
             </div>

@@ -1,11 +1,15 @@
 from django.shortcuts import render,get_object_or_404
 from .models import *
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 
 def home_view(request):
-    posts = Post.objects.filter(promote=True)
+    posts = Post.objects.filter(promote=1)
+    posts = Paginator(posts,4)
+    page_number = request.GET.get('page')
+    posts = posts.get_page(page_number)
     context = {
         "posts":posts
     }
