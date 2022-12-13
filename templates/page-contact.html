@@ -37,28 +37,36 @@
 
 
 
-                <div class="row">
-                    <div class="col-six tab-full">
-                        <h4 style="text-align: right;">ادرس ما</h4>
+                
 
-                        <p>
-                        1600 Amphitheatre Parkway<br>
-                        Mountain View, CA<br>
-                        94043 US
-                        </p>
-
-                    </div>
-
-                    <div class="col-six tab-full">
-                        <h4 style="text-align: right">اطلاعات تماس</h4>
-
-                        <p>sayhello@wordsmith.com<br>
-                        info@wordsmith.com <br>
-                        Phone: (+1) 123 456
-                        </p>
-
-                    </div>
-                </div>
+                    <div class="container">
+                        <h4 align="center">Contact Us</h4>
+                        <table>
+                        <form  action="{% url 'contact' %}" method="post">   {% csrf_token %}
+                          <tr>
+                            <td><label for="fname">Name</label></td>  
+                            <td><input type="text" id="fname" name="name" placeholder="Your name.."></td>
+                          </tr>
+                          
+                          <tr>
+                            <td><label for="lname">Email</label></td>
+                            <td><input type="email" id="lname" name="email" placeholder="Your Email.."></td>
+                          </tr>
+                          <tr>
+                            <td><label for="lname">subject</label></td>
+                            <td><input type="text" id="lname" name="subject" placeholder="Your subject.."></td>
+                          </tr>
+                          <tr>
+                            <td><label for="subject">message</label></td>
+                            <td><textarea id="subject" name="message" placeholder="Write something.." style="height:100px"></textarea></td>
+                          </tr> 
+                          <tr>
+                            <td><input type="submit" value="Submit"></td>
+                          </tr>
+                      
+                        </form>
+                    </table>
+                      </div> 
 
             </div> <!-- s-content__main -->
         </div> <!-- end row -->
