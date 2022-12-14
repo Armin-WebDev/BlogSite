@@ -63,7 +63,7 @@
 
                         <div class="item-entry__text">
                             <div class="item-entry__cat">
-                                <a href="category.html">{{post.category}}</a>
+                                <a href="{% url 'cat' cat_name=post.category.title %}">{{post.category}}</a>
                             </div>
 
                             <h1 class="item-entry__title"><a href="{% url 'single' pid=post.id%}">{{post.title}}</a></h1>

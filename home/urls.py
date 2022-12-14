@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact/',contact_view,name="contact"),
     path('about/', about_view , name="about"),
     path('categories/', categories_view , name="categories"),
+    path('cat-<str:cat_name>' ,home_view,name='cat'),
     path('post-<int:pid>', single_view , name="single"),
     
 
