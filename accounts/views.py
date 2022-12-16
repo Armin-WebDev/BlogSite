@@ -12,7 +12,10 @@ def login_view(request):
                 if user is not None:
                     login(request,user)
                     return redirect('/')
-    return render(request,'accounts/login.html')
+        return render(request,'accounts/login.html')            
+    else:
+        return redirect('/')
+        
 def logout_view(request):
     pass
 
