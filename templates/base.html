@@ -6,7 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Blogpy</title>
+    <title>َArminPy</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -26,8 +26,8 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
 
 </head>
 
@@ -47,12 +47,18 @@
     <!-- header
     ================================================== -->
     <header class="s-header header">
-
+        {% if user.is_authenticated %}
         <div class="header__logo">
-            <a class="logo" href="index.html">
-                ArminPy
+            <a class="logo" href="{% url 'login' %}">
+                {{user.get_full_name}}
             </a>
-
+        {%else%}
+        <div class="header__logo">
+            <div class="header__logo">
+                <a class="logo" href="{% url 'login' %}">
+                    LogIn
+                </a>
+        {% endif %}
         </div> <!-- end header__logo -->
         <a class="header__toggle-menu" href="#0" title="Menu"><span>منو</span></a>
         <nav class="header__nav-wrap">
